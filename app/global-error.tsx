@@ -1,0 +1,4 @@
+"use client";
+export default function GlobalError({ reset }: { error: Error & { digest?: string }; reset: () => void }) {
+  return <html lang="en"><body className="min-h-screen bg-[#050b14] text-white"><main className="grid min-h-screen place-items-center px-4"><div className="w-full max-w-lg rounded-2xl border border-[#17283a] bg-[#091320] p-7 text-center shadow-2xl"><div className="text-xs font-bold tracking-[.2em] text-[#7f92a8]">BUILDPRO</div><h1 className="mt-3 text-2xl font-bold">BuildPro needs to reload</h1><p className="mt-2 text-sm text-[#8191a6]">A critical application error occurred. Reload the application to continue.</p><button type="button" onClick={() => reset()} className="mt-6 rounded bg-[#1769e0] px-5 py-2.5 text-xs font-bold">Reload BuildPro</button></div></main></body></html>;
+}
